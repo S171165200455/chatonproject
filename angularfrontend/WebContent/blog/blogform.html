@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="container">
+    <form>
+    
+     <div class="form-group">
+     
+      <label for="usr">Name:</label>
+      <input type="text" ng-model="blog.title" class="form-control" id="usr">
+    </div>
+    
+    <div class="form-group">
+      <label for="comment">Description:</label>
+      <textarea ng-model="blog.body" class="form-control" rows="10" cols="50" id="comment"></textarea>
+    </div>
+    
+    <div class="row">
+  <div class="col-sm-12">
+    <div class="text-center">
+      <button class="btn btn-primary" id="singlebutton" ng-click="saveBlogPost()">Post</button>
+    </div>
+  </div>
+</div>
+  </form>
+</div>
+</body>
+</html>

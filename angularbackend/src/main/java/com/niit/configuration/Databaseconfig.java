@@ -14,7 +14,9 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.niit.model.Blog;
+import com.niit.model.BlogComment;
+import com.niit.model.BlogPost;
+import com.niit.model.Friend;
 import com.niit.model.Job;
 import com.niit.model.ProfilePicture;
 import com.niit.model.User;
@@ -47,7 +49,7 @@ properties.put("hibernate.hbm2ddl.auto", "update");
 	 
 	 LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 	 sessionBuilder.addProperties(getHibernateProperties());
-	sessionBuilder.addAnnotatedClasses(User.class,Blog.class,ProfilePicture.class,Job.class);
+	sessionBuilder.addAnnotatedClasses(User.class,BlogPost.class,ProfilePicture.class,Job.class,BlogComment.class,Friend.class);
 	
 	
      return sessionBuilder.buildSessionFactory();
